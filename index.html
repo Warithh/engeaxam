@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>صفحة الأسئلة | الكفاءة الإنكليزي</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="header">
+    <h1>الامتحان الوطني - اللغة الإنكليزية</h1>
+    <div class="badge">إعداد المهندس وارث</div>
+    <div class="nav">
+      <a href="bank.html">صفحة الأسئلة</a>
+      <a href="reading.html">القطعة الخارجية</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="panel">
+      <div class="section-title">إعداد الفورمة</div>
+      <div class="controls">
+        <label>الفورمة
+          <select id="formTemplate">
+            <option value="1">Form 1</option>
+            <option value="2">Form 2</option>
+            <option value="3">Form 3</option>
+            <option value="4">Form 4</option>
+            <option value="5">Form 5</option>
+            <option value="6">Form 6</option>
+          </select>
+        </label>
+        <label>الوقت (دقيقة)
+          <select id="quizMinutes">
+            <option value="45">45</option>
+            <option value="60" selected>60</option>
+            <option value="75">75</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="timer-wrap">
+        <div id="timerChip" class="timer-chip">الوقت المتبقي: 00:00</div>
+        <div id="progressChip" class="timer-chip">الإجابات: 0 / 40</div>
+      </div>
+      <div class="cta">
+        <button class="btn" id="startQuiz">ابدأ الفورمة</button>
+      </div>
+    </div>
+
+    <div class="progress-container">
+      <div class="progress-row">
+        <span id="progressText">السؤال 1 من 40</span>
+        <span class="timer-big" id="timerDisplay">00:00</span>
+      </div>
+      <div class="progress-bg"><div id="progressBar" class="progress-fill"></div></div>
+      <div id="navDots" class="nav-dots"></div>
+    </div>
+
+    <div id="questionStage"></div>
+
+    <div class="panel">
+      <div class="cta">
+        <button class="btn alt" id="prevBtn">السابق</button>
+        <button class="btn" id="nextBtn">التالي</button>
+        <button class="btn alt" id="finishBtn" style="display:none">إنهاء وتسليم</button>
+      </div>
+    </div>
+
+    <div id="quizResult"></div>
+    <div id="quizReport"></div>
+  </div>
+
+  <footer>تلوين الأرقام بالأعلى: مجاب / حالي / غير مجاب.</footer>
+
+  <script src="data.js"></script>
+  <script src="translations.js"></script>
+  <script src="bank.js"></script>
+</body>
+</html>
